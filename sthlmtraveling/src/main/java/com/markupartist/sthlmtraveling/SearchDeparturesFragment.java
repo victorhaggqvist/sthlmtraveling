@@ -80,8 +80,13 @@ public class SearchDeparturesFragment extends BaseListFragment implements Adapte
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         initViews();
-        fillData();
         super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        fillData();
     }
 
     private void initViews() {
